@@ -9,7 +9,7 @@ import {CgMenuGridO} from 'react-icons/cg'
 //import image
 import logo from '../../assests/logo.jpg'
 export const Navbar = () => {
-  // remove the navBar in the small width scren
+  // remove the navBar in the small width screen
   const[active,setActive]=useState('navBarMenu')
   const showNavBar=()=>{
     setActive('navBarMenu showNavBar');
@@ -17,6 +17,18 @@ export const Navbar = () => {
   const removeNavBar=()=>{
     setActive('navBarMenu');
   }
+
+  // Add background color to the second Navbar
+  const[noBg,addBg]=useState('navBarTwo')
+  const addBgColor=()=>{
+    if(window.scrollY>=10){
+      addBg('navBarTwo navbar_With_Bg');
+    }else{
+      addBg('navBarTwo')
+    }
+  }
+  window.addEventListener('scroll',addBgColor)
+  
   return (
     <div className='navBar flex'>
       <div className='navBarOne flex'>
@@ -33,7 +45,7 @@ export const Navbar = () => {
           <span>Sign Out</span>
         </div>
       </div>
-      <div className='navBarTwo flex'>
+      <div className={noBg}>
         <div className="logoDiv">
           <img src={logo} alt="logo" className='Logo'/>
         </div>
@@ -49,9 +61,9 @@ export const Navbar = () => {
             Contact
           </button>
         </div>
-        <button className='btn flex btnTwo'>
+        {/* <button className='btn flex btnTwo'>
           Contact
-        </button>
+        </button> */}
         <div onClick={showNavBar} className='toggleIcon'>
         <CgMenuGridO className='icon'/>
         </div>

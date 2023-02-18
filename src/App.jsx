@@ -14,12 +14,12 @@ function App() {
       <Navbar></Navbar>
       <Home></Home>
       <Search></Search>
-      <Support></Support>
+      {/*<Support></Support>
       <Info></Info>
       <Lounge></Lounge>
       <Travelers></Travelers>
       <Subscribers></Subscribers>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
   );
 }
