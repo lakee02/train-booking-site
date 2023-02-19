@@ -6,7 +6,7 @@ import {Support} from './Components/Support/Support';
 import {Info} from './Components/Info/Info';
 import {Lounge} from './Components/Lounge/Lounge';
 import {Travelers} from './Components/Travelers/Travelers'
-import {Subscribers} from './Components/Subscribers/Subscribers';
+import {Subscribe} from './Components/Subscribe/Subscribe';
 import {Footer} from './Components/Footer/Footer';
 function App() {
   return (
@@ -14,12 +14,12 @@ function App() {
       <Navbar></Navbar>
       <Home></Home>
       <Search></Search>
-      {/*<Support></Support>
+      <Support></Support>
       <Info></Info>
       <Lounge></Lounge>
       <Travelers></Travelers>
-      <Subscribers></Subscribers>
-      <Footer></Footer> */}
+      <Subscribe></Subscribe>
+      <Footer></Footer>
     </div>
   );
 }
