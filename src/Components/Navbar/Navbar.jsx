@@ -61,9 +61,9 @@ export const Navbar = () => {
             Contact
           </button>
         </div>
-        {/* <button className='btn flex btnTwo'>
+        <button className='btn flex btnTwo'>
           Contact
-        </button> */}
+        </button>
         <div onClick={showNavBar} className='toggleIcon'>
         <CgMenuGridO className='icon'/>
         </div>

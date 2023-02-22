@@ -341,7 +341,7 @@ h2{
 //support section styling
 .support{
     .sectionContainer{
-        .titleDiv{
+        .titlesDiv{
             text-align: center;
             small{
                 letter-spacing: .8rem;
@@ -460,16 +460,16 @@ h2{
                 margin-top: 1rem;
                 gap: 1.5rem;
             }
-
-            .singleGrid{
-                .gridTitle{
-                    display: block;
-                    padding-bottom: .5rem;
-                    font-weight: 500;
-                    color: var(--blackColor);
-                }
+        }
+        .singleGrid{
+            .gridTitle{
+                display: block;
+                padding-bottom: .5rem;
+                font-weight: 500;
+                color: blue;
             }
         }
+        
     }
 }
 
@@ -899,10 +899,187 @@ h2{
             .menu{
                 flex-direction: row;
                 gap: .5rem;
+                .listItem{
+                    padding: 0 .5rem;
+                    font-size: 14px;
+                    cursor: pointer;
+                    color: var(--textColor);
+                    font-weight: 700;
+
+                    &:hover{
+                        color: var(--PrimaryColor);
+                        font-weight: 700;
+                    }
+                }
             }
             .btnOne,.toggleIcon{
                 display: none;
             }    
         }
     }
+    // search
+    .search{
+        .sectionContainer{
+            .btns{
+                width: 70%;
+                border-radius: 3rem;
+                flex-direction: row;
+            }
+            .searchInputs{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+
+                .singleInput{
+                    .texts{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // support
+    .support{
+        .sectionContainer{
+            .infoDiv{
+                grid-template-columns: repeat(2,1fr);
+                gap: 2rem;
+                margin-top: 5rem;
+                .textDiv{
+                    margin-top: 0rem;
+                    grid-template-columns: repeat(1,1fr);
+                }
+            }
+        }
+    }
+    // info
+    .info{
+        .infoContainer{
+            padding: 0 6rem;
+            .titleDiv{
+                width: 90%;
+                margin: auto;
+                align-items: center;
+            }
+
+            .cardsDiv{
+                grid-template-columns: repeat(3,1fr);
+
+                .singleCard{
+                    max-width: 260px;
+                    padding: 3rem 1rem;
+                }
+            }
+        }
+    }
+    // lounge
+    .lounge{
+        .sectionContainer{
+            grid-template-columns: repeat(2,1fr);
+            .textDiv{
+                grid-area: 1;
+                .grids{
+                    grid-template-columns: repeat(2,1fr);
+                }
+            }
+        }
+    }
+    // travellers
+    .travelers{
+        .sectionContainer{
+            .travelersContainer{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
 }
+
+@media screen and (min-width:960px){
+    //home section 
+    .home{
+        padding-top: 13rem;
+        .mainText{
+            width: 70%;
+            padding-bottom: 1.5rem;
+            font-size: 22px;
+            line-height: 4rem;
+        }
+    }
+     //search section
+     .search{
+        .sectionContainer{
+            .searchInputs{
+                grid-template-columns: repeat(5,1fr);
+            }
+        }
+    }
+    // travellers
+    .travelers{
+        .sectionContainer{
+            .travelersContainer{
+                grid-template-columns: repeat(4,1fr);
+                margin: 3rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    // default style
+    p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    h4{
+        font-size: 20px;
+    }
+    
+    h2{
+        font-size: 27px;
+    }
+    .section{
+        padding: 6rem 0 4rem;
+    }
+    
+    .container{
+        width: 75%;
+        margin: auto;
+    }
+    // Navbar
+    .navBar{
+        .navBarOne,.navBarTwo{
+            padding: 1.5rem 5rem;
+        }
+
+        .navbar_With_Bg{
+            padding: 0 5rem;
+        }
+    }
+    //home section 
+    .home{
+        .mainText{
+         width: 80%;
+        }
+ 
+        .homeImages{
+         .videoDiv{
+             width: 80%;
+ 
+             .Video{
+                 height: 100%;
+                 width: 100%;
+                 border-radius: 15rem;
+             }
+         }
+ 
+         .Train{
+             width: 95%;
+             top: -8%;
+         }
+        }
+     }
+     
+}
+
